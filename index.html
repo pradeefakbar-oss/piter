@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b1d">
+  <title>Vieter Valentino — Chapter 20</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <canvas id="bubbleCanvas" aria-hidden="true"></canvas>
+  <div class="scanline" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#slide-1"><span class="brand-mark">V</span><span>V<span class="accent">.</span> VALENTINO</span></a>
+    <div class="top-right"><span class="edition">SPECIAL EDITION / 2027</span><button class="sound-btn" id="soundBtn" aria-label="Aktifkan musik">♫ <span>AMBIENCE</span></button></div>
+  </header>
+
+  <main id="deck">
+    <section class="slide active" id="slide-1" data-title="Opening">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> A NEW CHAPTER BEGINS</p>
+          <h1>LEVEL<br><span class="outline">TWENTY</span><span class="period">.</span></h1>
+          <p class="hero-name">HAPPY BIRTHDAY, <strong>VIETER VALENTINO</strong></p>
+          <p class="muted intro">Dua dekade perjalanan. Ribuan cerita. Dan masih banyak hal luar biasa yang menunggu di depan.</p>
+          <button class="primary-btn next-btn">MULAI PERJALANAN <span>↗</span></button>
+        </div>
+        <div class="hero-art">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+          <div class="core"><span>20</span><small>YEARS</small></div>
+          <div class="floating-tag tag-top">27 / 02 / 2027</div>
+          <div class="floating-tag tag-bottom">EST. 2007 — INFINITE POTENTIAL</div>
+          <div class="crosshair c1"></div><div class="crosshair c2"></div>
+        </div>
+      </div>
+      <div class="bottom-note"><span>SCROLL OR USE ARROWS</span><span>01 — 08</span></div>
+    </section>
+
+    <section class="slide" id="slide-2" data-title="The Day">
+      <div class="section-kicker">02 / THE DAY</div>
+      <div class="center-content">
+        <p class="eyebrow">A DATE WORTH CELEBRATING</p>
+        <h2>THE DAY<br><span class="gradient-text">YOU ARRIVED.</span></h2>
+        <div class="date-panel"><div><strong>27</strong><span>FEBRUARY</span></div><i></i><div><strong>2007</strong><span>THE BEGINNING</span></div></div>
+        <p class="quote">“Hari ketika dunia mendapat satu alasan lagi untuk menjadi lebih berwarna.”</p>
+        <p class="muted">Hari ini bukan sekadar bertambah usia. Ini tentang semua hal yang sudah kamu lewati dan semua kemungkinan yang sedang menunggumu.</p>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-3" data-title="Gallery">
+      <div class="section-kicker">03 / THE PERSON</div>
+      <div class="split-layout">
+        <div><p class="eyebrow">A LITTLE COLLECTION OF YOU</p><h2>THE<br><span class="gradient-text">MOMENTS.</span></h2><p class="muted">Setiap foto menyimpan cerita. Masukkan momen-momen terbaik Vieter di sini dan biarkan kenangannya berbicara.</p><div class="micro-label">PHOTO ARCHIVE / 01—04</div></div>
+        <div class="photo-grid">
+          <div class="photo-card photo-main"><img src="assets/foto/vieter-1.jpg" alt="Foto Vieter 1" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="photo-placeholder"><span>01</span><b>FOTO VIETER</b><small>Ganti dengan vieter-1.jpg</small></div></div>
+          <div class="photo-card"><img src="assets/foto/vieter-2.jpg" alt="Foto Vieter 2" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="photo-placeholder"><span>02</span><b>YOUR MOMENT</b><small>vieter-2.jpg</small></div></div>
+          <div class="photo-card"><img src="assets/foto/vieter-3.jpg" alt="Foto Vieter 3" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="photo-placeholder"><span>03</span><b>GOOD TIMES</b><small>vieter-3.jpg</small></div></div>
+          <div class="photo-card"><img src="assets/foto/vieter-4.jpg" alt="Foto Vieter 4" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><div class="photo-placeholder"><span>04</span><b>UNFORGETTABLE</b><small>vieter-4.jpg</small></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-4" data-title="Video">
+      <div class="section-kicker">04 / PLAY THE MEMORIES</div>
+      <div class="center-content wide">
+        <p class="eyebrow">PRESS PLAY, RELIVE THE MOMENTS</p><h2>YOUR STORY<br><span class="gradient-text">IN MOTION.</span></h2>
+        <div class="video-frame">
+          <video id="birthdayVideo" controls playsinline poster="assets/foto/video-cover.jpg">
+            <source src="assets/video/vieter.mp4" type="video/mp4">
+            Browser kamu tidak mendukung pemutar video.
+          </video>
+          <div class="video-hint">Letakkan video bernama <b>vieter.mp4</b> di folder <b>assets/video/</b>.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-5" data-title="Words">
+      <div class="section-kicker">05 / WORDS FOR YOU</div>
+      <div class="center-content words-content">
+        <p class="eyebrow">A MESSAGE FROM THE HEART</p>
+        <h2>KEEP BEING<br><span class="gradient-text">UNFORGETTABLE.</span></h2>
+        <div class="message-card"><span class="quote-mark">“</span><p>Vieter, semoga di usia yang ke-20 ini kamu semakin mengenal dirimu sendiri, semakin berani mengambil langkah, dan semakin yakin dengan jalan yang sedang kamu tempuh.</p><p>Terima kasih sudah menjadi bagian dari banyak cerita. Jangan pernah merasa harus menjadi sempurna untuk menjadi seseorang yang berharga. Cukup terus bertumbuh, tetap rendah hati, dan jangan kehilangan hal-hal baik yang ada dalam dirimu.</p><span class="signature">WITH GOOD THOUGHTS — FOR VIETER</span></div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-6" data-title="Prayer">
+      <div class="section-kicker">06 / A PRAYER FOR YOU</div>
+      <div class="center-content prayer-content">
+        <div class="prayer-symbol">✳</div><p class="eyebrow">MAY LIFE BE KIND TO YOU</p>
+        <h2>OUR WISHES.<br><span class="gradient-text">YOUR JOURNEY.</span></h2>
+        <div class="prayer-list">
+          <div><span>01</span><p>Semoga Tuhan selalu menjaga setiap langkahmu, melindungimu dalam setiap perjalanan, dan menjauhkanmu dari hal-hal yang tidak baik.</p></div>
+          <div><span>02</span><p>Semoga kesehatan, ketenangan, kebahagiaan, dan orang-orang tulus selalu hadir dalam hidupmu.</p></div>
+          <div><span>03</span><p>Semoga setiap cita-cita dimudahkan jalannya, setiap usaha menemukan hasil terbaik, dan setiap doa mendapatkan jawaban pada waktu yang tepat.</p></div>
+          <div><span>04</span><p>Semoga kamu tetap kuat saat sulit, tetap bersyukur saat senang, dan selalu punya alasan untuk tersenyum.</p></div>
+        </div>
+        <p class="amen">AAMIIN.</p>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-7" data-title="Motivation">
+      <div class="section-kicker">07 / THE NEXT LEVEL</div>
+      <div class="center-content motivation">
+        <p class="eyebrow">A REMINDER FOR THE ROAD AHEAD</p>
+        <h2>DON'T STOP<br><span class="gradient-text">BECOMING.</span></h2>
+        <p class="big-motivation">“Jangan takut berjalan pelan. Tak perlu membandingkan garis waktumu dengan siapa pun.”</p>
+        <div class="motivation-line"></div>
+        <p class="muted">Usia 20 bukan tuntutan untuk sudah memiliki segalanya. Ini kesempatan untuk belajar lebih banyak, mencoba lebih berani, memperbaiki kesalahan, dan membangun masa depan dengan caramu sendiri.</p>
+        <div class="pill-row"><span>STAY HUMBLE</span><span>KEEP GROWING</span><span>TRUST THE PROCESS</span></div>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-8" data-title="Final">
+      <div class="final-content">
+        <div class="final-orb"><span>20</span></div>
+        <p class="eyebrow">THIS IS ONLY THE BEGINNING</p>
+        <h2>HAPPY<br><span class="gradient-text">BIRTHDAY.</span></h2>
+        <h3>VIETER VALENTINO</h3>
+        <p class="muted">May your twenties be filled with purpose, courage, meaningful people, and beautiful surprises.</p>
+        <div class="final-date">27 FEBRUARY 2027 <span>✦</span> CHAPTER 20</div>
+        <button class="primary-btn" id="replayBtn">ULANGI DARI AWAL ↺</button>
+      </div>
+      <div class="bottom-note"><span>MADE TO CELEBRATE YOU</span><span>END — BEGIN AGAIN</span></div>
+    </section>
+  </main>
+
+  <nav class="navigation" aria-label="Navigasi slide">
+    <button id="prevBtn" aria-label="Slide sebelumnya">←</button>
+    <div class="progress-wrap"><div class="progress-track"><div id="progressBar"></div></div><span id="slideCount">01 / 08</span></div>
+    <button id="nextBtn" aria-label="Slide berikutnya">→</button>
+  </nav>
+  <div class="side-label">V / VALENTINO</div>
+  <script src="script.js"></script>
+</body>
+</html>
